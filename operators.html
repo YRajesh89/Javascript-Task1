@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <title>JS-Operators</title>
+</head>
+<body>
+<!--Bootstrap version 5-->
+    <!--CDN -->
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid d-flex justify-content-end">
+        <a class="navbar-brand" href="#">JS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link navigation-link" aria-current="page"  href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page">Operators</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navigation-link" aria-current="page" href="/Cond&loop.html">Cond & Loop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navigation-link" aria-current="page" href="/functions.html">Functions</a>
+            </li>
+            
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 operators" id="ope">
+      <h1>Variable Declaration</h1>
+      <p>There are 3 ways to declare a JavaScript variable:</p>
+
+      <div class="d-flex flex-row bd-highlight mb-3">
+        <div class="p-2 bd-highlight primary"><a href="#var">Using var</a></div>
+        <div class="p-2 bd-highlight"><a href="#let">Using let</a></div>
+        <div class="p-2 bd-highlight"><a href="#let">Using const</a></div>
+      </div>
+    <div class="container mt-3">
+        <h3 id="var">Examples for Var:</h3>
+      <ul class="list-group">
+
+        <li class="list-group-item">var value1 = 56; //number</li>
+        <li class="list-group-item">var value2 = 34; //number</li>
+        <li class="list-group-item">var name1="Rajesh"; //string</li>
+        <li class="list-group-item">var show=true; //Boolean</li>
+        <li class="list-group-item">var valSet=null; //object</li>
+        <li class="list-group-item">var myName; //undefined</li>
+        <li class="list-group-item">var myDataView=
+          {<br/>
+          name:"Rajesh", //object type<br/>
+          Company:"TNQ"<br/>
+      }<br/><br/>
+      
+      var myData=[
+          {<br/>
+          name:"Rajesh", //object type<br/>
+          Company:"TNQ"<br/>
+      },<br/><br/>
+      {<br/>
+          name:"Yuva",<br/>
+          Company:"Govt"<br/>
+      },<br/><br/>
+      {<br/>
+          name:"Gan",<br/>
+          Company:"TNQ"<br/>
+      }
+      ]</li>
+            </ul>
+            <button type="button" class="btn">Demo</button>
+      
+    </div>
+    <div class="container mt-5">
+      <h3 id="let">Diff B/W Var, Const and Let:</h3>
+      <ul class="list-group">
+        <li class="list-group-item">const a2=40; //Uncaught TypeError: Assignment to constant variable.<br/>
+      a2=30;<br/>
+      console.log(a2);</li>
+     
+      <li class="list-group-item">var a1=10;<br/>
+     var a1=30;<br/>
+     console.log(a1); // no error will be there</li>
+     
+     <li class="list-group-item">let a=10;<br/>
+     let a=30; //Uncaught SyntaxError: Identifier 'a' has already been declared<br/>
+      
+     console.log(a); //30</li>
+
+     <li class="list-group-item">var result;<br/>
+result = value1+name1; //concatenation<br/>
+console.log(result);</li>
+
+    </ul>
+    <button type="button" class="btn">Demo</button>
+    </div>
+   
+    <div class="container mt-5 operators" id="ope">
+      <h1>JavaScript Operators</h1>
+      <p>JavaScript has the following types of operators. This section describes the operators and contains information about operator precedence.</p>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Assignment operators
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              An assignment operator assigns a value to its left operand based on the value of its right operand. The simple assignment operator is equal (=), which assigns the value of its right operand to its left operand. That is, x = f() is an assignment expression that assigns the value of f() to x.<br/>
+              <table class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Shorthand operator</th>
+                    <th scope="col">Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Assignment</th>
+                    <td>x = f()</td>
+                    <td>x = f()</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Addition assignment</th>
+                    <td>x += f()</td>
+                    <td>x = x + f()</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Subtraction assignment</th>
+                    <td>x -= f()</td>
+                    <td>x = x - f()</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Multiplication assignment</th>
+                    <td>x *= f()</td>
+                    <td>x = x * f()</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Division assignment</th>
+                    <td>x /= f()</td>
+                    <td>x = x / f()</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Comparison operators
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              A comparison operator compares its operands and returns a logical value based on whether the comparison is true. The operands can be numerical, string, logical, or object values. Strings are compared based on standard lexicographical ordering, using Unicode values. In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison. This behavior generally results in comparing the operands numerically. The sole exceptions to type conversion within comparisons involve the === and !== operators, which perform strict equality and inequality comparisons. These operators do not attempt to convert the operands to compatible types before checking equality. The following table describes the comparison operators in terms of this sample code:
+              <table class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Operator</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Examples returning true</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Equal (==)</th>
+                    <td>Returns true if the operands are equal.</td>
+                    <td>3 == var1<br/>
+              "3" == var1<br/>
+              
+              3 == '3'</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Not equal (!=)</th>
+                    <td>Returns true if the operands are not equal.</td>
+                    <td>var1 != 4<br/>
+              var2 != "3"</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Strict equal (===)</th>
+                    <td>Returns true if the operands are equal and of the same type</td>
+                    <td>3 === var1</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Greater than or equal (>=)</th>
+                    <td>Returns true if the left operand is greater than or equal to the right operand.</td>
+                    <td>var2 >= var1<br/>
+              var1 >= 3</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Less than or equal (<=)</th>
+                    <td>Returns true if the left operand is less than or equal to the right operand.</td>
+                    <td>var1 <= var2<br/>
+              var2 <= 5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Arithmetic operators
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (/). These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces Infinity). For example:
+              <table class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Operator</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Remainder (%)</th>
+                    <td>	Binary operator. Returns the integer remainder of dividing the two operands.</td>
+                    <td>12 % 5 returns 2.</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Increment (++)</th>
+                    <td>Unary operator. Adds one to its operand. If used as a prefix operator (++x), returns the value of its operand after adding one; if used as a postfix operator (x++), returns the value of its operand before adding one.</td>
+                    <td>If x is 3, then ++x sets x to 4 and returns 4, whereas x++ returns 3 and, only then, sets x to 4.</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Decrement (--)</th>
+                    <td>Unary operator. Subtracts one from its operand. The return value is analogous to that for the increment operator.</td>
+                    <td>If x is 3, then --x sets x to 2 and returns 2, whereas x-- returns 3 and, only then, sets x to 2.</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Exponentiation operator (**)</th>
+                    <td>Calculates the base to the exponent power, that is, base^exponent</td>
+                    <td>2 ** 3 returns 8.<br/>
+              10 ** -1 returns 0.1.</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Plus (+)</th>
+                    <td>Nomal addition</td>
+                    <td>var a =10;<br/>var b =10;<br/>var res =a+b;</td>
+                  </tr>
+                <tr>
+                    <th scope="row">Minus (-)</th>
+                    <td>Nomal Subtraction</td>
+                    <td>var a =10;<br/>var b =10;<br/>var res =a-b;</td>
+                  </tr>
+                <tr>
+                    <th scope="row">Multiplication (*)</th>
+                    <td>Nomal Multiplication</td>
+                    <td>var a =10;<br/>var b =10;<br/>var res =a*b;</td>
+                  </tr>
+                <tr>
+                    <th scope="row">Division (+)</th>
+                    <td>Nomal Division</td>
+                    <td>var a =10;<br/>var b =10;<br/>var res =a/b;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Bitwise operators
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather than as decimal, hexadecimal, or octal numbers
+              <table class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Operator</th>
+                    <th scope="col">Usage</th>
+                    <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Bitwise AND</th>
+                    <td>a & b</td>
+                    <td>Returns a one in each bit position for which the corresponding bits of both operands are ones.</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Bitwise OR</th>
+                    <td>a | b</td>
+                    <td>Returns a zero in each bit position for which the corresponding bits of both operands are zeros.</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Bitwise XOR</th>
+                    <td>a ^ b</td>
+                    <td>Returns a zero in each bit position for which the corresponding bits are the same. [Returns a one in each bit position for which the corresponding bits are different.]</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Bitwise NOT</th>
+                    <td>~ a</td>
+                    <td>Inverts the bits of its operand.</td>
+                  </tr>
+                    <tr>
+                    <th scope="row">Left shift</th>
+                    <td>a << b</td>
+                    <td>Shifts a in binary representation b bits to the left, shifting in zeros from the right.</td>
+                  </tr>
+                <tr>
+                    <th scope="row">Sign-propagating right shift</th>
+                    <td>	a >> b</td>
+                    <td>Shifts a in binary representation b bits to the right, discarding bits shifted off.</td>
+                  </tr>
+                <tr>
+                    <th scope="row">Zero-fill right shift</th>
+                    <td>a >>> b</td>
+                    <td>Shifts a in binary representation b bits to the right, discarding bits shifted off, and shifting in zeros from the left.</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Logical operators
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value. However, the && and || operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value.
+              <table class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Operator</th>
+                    <th scope="col">Usage</th>
+                    <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Logical AND (&&)</th>
+                    <td>expr1 && expr2</td>
+                    <td>Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, && returns true if both operands are true; otherwise, returns false.</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Logical OR (||)</th>
+                    <td>expr1 || expr2</td>
+                    <td>Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, || returns true if either operand is true; if both are false, returns false.</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Logical NOT (!)</th>
+                    <td>!expr</td>
+                    <td>Returns false if its single operand that can be converted to true; otherwise, returns true.</td>
+                  </tr>
+                   
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              String operators
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              In addition to the comparison operators, which can be used on string values, the concatenation operator (+) concatenates two string values together, returning another string that is the union of the two operand strings.<br/><br/>
+              <span>For example,<br/><br/>
+              console.log('my ' + 'string'); // console logs the string "my string".<br/><br/></span>
+              The shorthand assignment operator += can also be used to concatenate strings.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              Conditional (ternary) operator
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              The conditional operator is the only JavaScript operator that takes three operands. The operator can have one of two values based on a condition. The syntax is:<br/><br/>
+              <span>condition ? val1 : val2<br/><br/></span>
+              If condition is true, the operator has the value of val1. Otherwise it has the value of val2. You can use the conditional operator anywhere you would use a standard operator.
+
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              Comma operator
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              The comma operator (,) evaluates both of its operands and returns the value of the last operand. This operator is primarily used inside a for loop, to allow multiple variables to be updated each time through the loop. It is regarded bad style to use it elsewhere, when it is not necessary. Often two separate statements can and should be used instead.<br/><br/>
+            <span>var x = [0,1,2,3,4,5,6,7,8,9]<br/>
+var a = [x, x, x, x, x];<br/>
+
+for (var i = 0, j = 9; i <= j; i++, j--)<br/>
+//                                ^
+  console.log('a[' + i + '][' + j + ']= ' + a[i][j]);</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            Unary operators
+          </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+          <p>A unary operation is an operation with only one operand.</p>
+            <h3>delete</h3>
+          <p>The delete operator deletes an object's property. The syntax is:<br/><br/>
+          <span>delete object.property;<br/>
+            delete object[propertyKey];<br/>
+            delete objectName[index];</span></p>
+
+          </div>
+        </div>
+      </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+          Relational operators
+        </button>
+      </h2>
+      <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>A relational operator compares its operands and returns a Boolean value based on whether the comparison is true.</p>
+          <h3>in</h3>
+        <p>The in operator returns true if the specified property is in the specified object. The syntax is:<br/><br/>
+        <span>propNameOrNumber in objectName<br/><br/></span>
+          where propNameOrNumber is a string, numeric, or symbol expression representing a property name or array index, and objectName is the name of an object.</p>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    </div>
+    
+    
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+
+
+  <!-- <script src="script.js"></script> -->
+  <script src="conditions.js"></script>
+  <script src="looping.js"></script>
+  <script src="functions.js"></script>
+  <script src="dateFunction.js"></script>
+  </body>
+</html>
